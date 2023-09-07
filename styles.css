@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Roboto", sans-serif;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.controls {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 55%;
+}
+.controls > div {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.left {
+  position: absolute;
+  left: 20px;
+  background: linear-gradient(#33d8d8, #0d0f92);
+  color: #fff;
+  border-radius: 5px;
+}
+.right {
+  position: absolute;
+  right: 20px;
+  background: linear-gradient(#33d8d8, #0d0f92);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.left:active {
+  transform: translateX(-10px);
+}
+
+.right:active {
+  transform: translateX(10px);
+}
+
+.slider .wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider .wrapper .top > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slider .wrapper .top {
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+}
+.slider .wrapper .bottom {
+  height: 40%;
+  width: 100%;
+  overflow: hidden;
+  padding-inline: 1rem;
+}
+
+.slider .wrapper .top > div,
+.slider .wrapper .bottom > div {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.slider .wrapper .bottom > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .wrapper .bottom > div h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+  text-align: center;
+  background: -webkit-linear-gradient(90deg, #33d8d8, #0d0f92);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.slider .wrapper .bottom > div p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 25px;
+  color: #555;
+  font-weight: 300;
+  text-align: justify;
+  margin-bottom: 10px;
+  display: block;
+  max-width: 600px;
+}
+
+.slider .wrapper .top div:nth-child(1) {
+  margin-top: -240vh;
+}
+
+@media only screen and (max-width: 580px) {
+    .slider .wrapper .bottom > div h2 {
+        font-size: 2rem;
+    }
+    .slider .wrapper .bottom > div p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+}
