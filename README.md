@@ -16,7 +16,7 @@ This web page displays beautiful images and brief descriptions of five Indian ci
 
 ## Demo
 
-You can see a live demo of this project [here](link-to-demo).
+You can see a live demo of this project [here](https://abhinav7895.github.io/image-slider/).
 
 ## Features
 
